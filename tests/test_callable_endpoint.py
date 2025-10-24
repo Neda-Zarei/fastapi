@@ -13,7 +13,7 @@ endpoint = partial(main, "foo")
 
 app = FastAPI()
 
-app.get("/")(endpoint)
+app.get("/", operation_id="main_get")(endpoint)
 
 
 client = TestClient(app)
